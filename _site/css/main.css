@@ -1,0 +1,23 @@
+/*
+Variables
+Table Of Contents
+. Responsive
+
+
+*/
+/*
+Tools.scss Table of Contents 
+------------------------------
+1. Box-sizing helper
+2. Opacity helper
+3. Box-shadow helper
+4. Vertical align helper
+5. Gradient helper
+6. Breakpoint add-in
+------------------------------
+*/
+.bug {
+  color: blue; }
+  @media only screen and (max-width: 1200px) {
+    .bug {
+      color: red; } }

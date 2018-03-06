@@ -1,0 +1,77 @@
+/*
+Variables - Table of Contents 
+------------------------------
+1. Colors
+2. Type
+3. Rhythm
+4. Responsive
+------------------------------
+
+
+Notes:
+- Any color naming conventions (i.e. 'gray-1', 'blue-3') are numbered from 
+  lowest being lighter, and higher being darker. Same goes for sub-colors(i.e.
+  'gray-1-2' is darker than 'gray-1-1');
+
+*/
+
+// 1.
+// Colors
+    // Site colors
+        //Site color 1
+        $brand-1: red;
+            //variations
+            $brand-1-1: orange;
+            $brand-1-2: green;
+
+        //Site color 2
+        $brand-2: blue;
+            //variatons
+            $brand-2-1: lightblue;
+            $brand-2-2: purple;
+    
+    // Helper colors
+    $gray-1: #eee;
+    $gray-2: #A7A7A7;
+    $gray-3: #949494;
+    $gray-4: #666666;
+
+
+// 2. 
+// Type
+    // Font sizes
+    $font-size-small: 12px;
+    $font-size-medium: 16px;
+    $font-size-large: 24px;
+    $font-size-x-large: 32px;
+    $font-size-xx-large: 48px
+    $font-size-xxx-large: 64px;
+
+    // Font families
+    $font-family-header: Arial;
+    $font-family-body: Arial;
+    $font-family-alt: Arial;
+
+
+// 3.
+// Rhythm
+    // Component rhythm
+    $wrapper-padding: 100px 80px;
+
+    $text-margin-h: 0px 0px 25px;
+    $text-margin-p: 0px 0px 10px;
+    
+    $text-margin-h-top: 25px 0px;
+    $text-margin-p-top: 10px 0px;
+
+    
+
+
+
+
+// 4. Responsive
+    // Breakpoints
+    $desktop-break: 1200px;
+    $sm-dekstop-break: 1000px;
+    $tablet-break: 768px;
+    $mobile-break: 500px;

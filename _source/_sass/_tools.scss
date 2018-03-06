@@ -1,0 +1,106 @@
+/*
+Tools - Table of Contents 
+------------------------------
+1. Box-sizing helper
+2. Opacity helper
+3. Box-shadow helper
+4. Vertical align helper
+5. Gradient helper
+6. Breakpoint add-in
+------------------------------
+*/
+
+
+// 1.
+// Box-sizing mixin for full browser support 
+@mixin box-sizing($type) {
+    -webkit-box-sizing:$type;
+    -moz-box-sizing:$type;
+    box-sizing:$type;
+}
+
+// 2.
+// Opacity mixin for full browser support
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    filter: alpha(opacity=($opacity * 100));
+}
+
+// 3.
+// Box-shadow mixin for full browser support 
+@mixin box-shadow( $h: 10px , $v: 10px , $b: 0px , $s: 0px , $c: #000000 ) {
+    -webkit-box-shadow: $h $v $b $s $c;
+    -moz-box-shadow: $h $v $b $s $c;
+    box-shadow: $h $v $b $s $c;
+}
+
+// 4.
+// Vertical-align using parent/child relative positioning 
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+// 5.
+//Gradient mixin that takes a first color, an end color, and orientation.
+@mixin gradient($start-color, $end-color, $orientation) {
+    background: $start-color;
+    @if $orientation == vertical {
+        // vertical
+        background: -moz-linear-gradient(top,  $start-color 0%, $end-color 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start-color), color-stop(100%,$end-color));
+        background: -webkit-linear-gradient(top,  $start-color 0%,$end-color 100%);
+        background: -o-linear-gradient(top,  $start-color 0%,$end-color 100%);
+        background: -ms-linear-gradient(top,  $start-color 0%,$end-color 100%);
+        background: linear-gradient(to bottom,  $start-color 0%,$end-color 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=0 );
+        }
+    @else if $orientation == horizontal {
+    // horizontal
+        background: -moz-linear-gradient(left,  $start-color 0%, $end-color 100%);
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,$start-color), color-stop(100%,$end-color));
+        background: -webkit-linear-gradient(left,  $start-color 0%,$end-color 100%);
+        background: -o-linear-gradient(left,  $start-color 0%,$end-color 100%);
+        background: -ms-linear-gradient(left,  $start-color 0%,$end-color 100%);
+        background: linear-gradient(to right,  $start-color 0%,$end-color 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=1 );
+    }
+    @else {
+    // radial
+        background: -moz-radial-gradient(center, ellipse cover,  $start-color 0%, $end-color 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$start-color), color-stop(100%,$end-color));
+        background: -webkit-radial-gradient(center, ellipse cover,  $start-color 0%,$end-color 100%);
+        background: -o-radial-gradient(center, ellipse cover,  $start-color 0%,$end-color 100%);
+        background: -ms-radial-gradient(center, ellipse cover,  $start-color 0%,$end-color 100%);
+        background: radial-gradient(ellipse at center,  $start-color 0%,$end-color 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=1 );
+    }
+}
+
+
+
+// 6. 
+// Breakpoint mixin for including media queries for designated sizes
+
+@mixin breakpoint($point) {
+    @if $point == mobile{
+        @media only screen and (min-width:$mobile-break ) {
+            @content;
+        }
+    } @else if $point == tablet {
+        @media only screen and (max-width:$tablet-break) {
+            @content;
+        }
+    } @else if $point == sm-desktop {
+        @media only screen and (max-width:$sm-desktop-break) {
+            @content;
+        }
+    } @else if $point == desktop {
+        @media only screen and (max-width: $desktop-break) {
+            @content;
+        }
+    }
+}

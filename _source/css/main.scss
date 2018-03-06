@@ -1,0 +1,20 @@
+---
+---
+
+// Settings/Variables - provides pre-processor variables and global settings
+@import '../_sass/_variables.scss';
+
+// Tools - Houses globally available tooling like mixins and functions
+@import '../_sass/_tools.scss';
+
+// Defaults - high level css, including resets, normalization, and element stylings.
+@import '../_sass/_defaults.scss';
+
+// Objects - first-level of class-based selectors
+@import '../_sass/_objects.scss';
+
+// Components - styles for explicit pieces of the DOM and its design. No selectors with lower specificity than one class.
+@import '../_sass/_components.scss';
+
+//Trumps - styles that override everything else; includes helper classes
+@import '../_sass/_trumps.scss';
