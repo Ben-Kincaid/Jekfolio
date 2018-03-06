@@ -1,12 +1,20 @@
 /*
-Variables
-Table Of Contents
-. Responsive
+Variables - Table of Contents 
+------------------------------
+1. Colors
+2. Type
+3. Rhythm
+4. Responsive
+------------------------------
 
+Notes:
+- Any color naming conventions (i.e. 'gray-1', 'blue-3') are numbered from 
+  lowest being lighter, and higher being darker. Same goes for sub-colors(i.e.
+  'gray-1-2' is darker than 'gray-1-1');
 
 */
 /*
-Tools.scss Table of Contents 
+Tools - Table of Contents 
 ------------------------------
 1. Box-sizing helper
 2. Opacity helper
@@ -16,8 +24,5 @@ Tools.scss Table of Contents
 6. Breakpoint add-in
 ------------------------------
 */
-.bug {
-  color: blue; }
-  @media only screen and (max-width: 1200px) {
-    .bug {
-      color: red; } }
+.testing {
+  color: red; }
