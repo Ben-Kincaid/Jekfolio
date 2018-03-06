@@ -1,0 +1,55 @@
+// Global resets
+
+*, *:before, *:after {
+    @include box-sizing(border-box);
+}
+
+// Text Elements
+h1, h2, h3, h4, h5, h6, p {
+    color: $offblack;
+    margin: 0;
+    padding: 0;
+    line-height: initial;
+}
+h1, h2, h3{
+    margin: $text-margin-h;
+}
+p, h4, h5 {
+    margin: $text-margin-p;
+   
+}
+
+h1 {
+    font-size: $font-size-xx-large;
+    font-weight: bold;
+}
+h2 {
+    font-size: $font-size-x-large;
+    font-weight: bold;
+}
+h3 {
+    font-size: $font-size-large;
+    font-weight: bold;
+}
+h4 {
+    font-size: $font-size-medium;
+}
+h5 {
+    font-size: $font-size-medium;
+}
+p {
+    font-size: $font-size-medium;
+    line-height: 20px;
+}
+
+input, select, textarea {
+    border: 1px solid $gray-2;
+    outline: none;
+    filter: drop-shadow(0px 0px 0px rgba(40, 40, 40, 0));
+    transition: 0.2s filter;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    filter: drop-shadow(0px 0px 3px rgba(10, 10, 10, 0.3));
+}
