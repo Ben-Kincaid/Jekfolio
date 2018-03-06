@@ -74,5 +74,5 @@ Thumbs.db
 ehthumbs.db
 Thumbs.db
 _config.yml
-_site/
-.sass-cache/
+_site/*
+.sass-cache/*
