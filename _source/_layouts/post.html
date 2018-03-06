@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {% include head.html %}
+</head>
+<body class = "post post-{{page.slug}}">
+    {% include header.html %}
+    
+    <div id = "wrapper wrapper-post">
+        {{ content }}
+    </div>
+
+    {% include footer.html %}
+</body>
+</html>
