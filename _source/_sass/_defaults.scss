@@ -4,52 +4,60 @@
     @include box-sizing(border-box);
 }
 
+body, html {
+    font-size: 16px;
+}
 // Text Elements
 h1, h2, h3, h4, h5, h6, p {
     color: $offblack;
     margin: 0;
     padding: 0;
-    line-height: initial;
+    
 }
 h1, h2, h3{
     margin: $text-margin-h;
+    line-height: 1.25;
+    font-weight: bold;
+    font-family: $header-font;
 }
 p, h4, h5 {
     margin: $text-margin-p;
-   
-}
-
-h1 {
-    font-size: $font-size-xx-large;
-    font-weight: bold;
-}
-h2 {
-    font-size: $font-size-x-large;
-    font-weight: bold;
-}
-h3 {
-    font-size: $font-size-large;
-    font-weight: bold;
-}
-h4 {
+    line-height: 1.5;
+    font-family: $body-font;
     font-size: $font-size-medium;
-}
-h5 {
-    font-size: $font-size-medium;
-}
-p {
-    font-size: $font-size-medium;
-    line-height: 20px;
 }
 
 input, select, textarea {
+    font-family: $body-font;
     border: 1px solid $gray-2;
     outline: none;
+    padding: 5px;
+    border-radius: 1px;
     filter: drop-shadow(0px 0px 0px rgba(40, 40, 40, 0));
     transition: 0.2s filter;
 }
+
 
 input:focus, select:focus, textarea:focus {
     outline: none;
     filter: drop-shadow(0px 0px 3px rgba(10, 10, 10, 0.3));
 }
+
+h1 {
+    font-size: $font-size-xx-large;
+  
+}
+h2 {
+    font-size: $font-size-x-large;
+   
+}
+h3 {
+    font-size: $font-size-large;
+    
+}
+h4, h5 {
+    font-size: $font-size-medium;
+    font-weight: bold;
+}
+
+
